@@ -50,7 +50,7 @@ private fun profs(): List<ProfessorModel> {
             6,
             "Prof. Dr.-Ing.",
             "Jan",
-            "Plzl",
+            "Pelzl",
             "jan.pelzl@hshl.de",
             "+49 (0)2381 8789-476"
         ),

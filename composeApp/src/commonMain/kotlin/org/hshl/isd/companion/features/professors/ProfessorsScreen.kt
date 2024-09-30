@@ -15,9 +15,9 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.ClickableText
-import androidx.compose.material.Card
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Person
+import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -54,10 +54,13 @@ class ProfessorsScreen : Screen {
         val profs = getProfessors()
 
         Column(
-            modifier = Modifier.fillMaxSize().clickable(
-                interactionSource = remember { MutableInteractionSource() },
-                indication = null
-            ) { focusManager.clearFocus() }
+            modifier = Modifier
+                .padding(bottom = 24.dp)
+                .fillMaxSize()
+                .clickable(
+                    interactionSource = remember { MutableInteractionSource() },
+                    indication = null
+                ) { focusManager.clearFocus() }
         ) {
             TextField(
                 value = searchQuery,
@@ -68,11 +71,9 @@ class ProfessorsScreen : Screen {
                 placeholder = { Text("Suchen...") },
                 singleLine = true
             )
-
             LazyColumn(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .weight(1f)
                     .padding(bottom = 56.dp)
             ) {
                 items(profs.filter { it.matchesSearchQuery(searchQuery) }) { professor ->
@@ -86,38 +87,49 @@ class ProfessorsScreen : Screen {
 @Composable
 fun ProfessorCard(professor: ProfessorModel) {
     val nameTextSize: TextUnit = 18.sp
+    val nameLength: Int =
+        professor.title.length + professor.firstName.length + professor.lastName.length + 3
     val profilePictureSize: Dp = 80.dp
 
     Card(
         modifier = Modifier.padding(8.dp).fillMaxWidth(),
-        backgroundColor = MaterialTheme.colorScheme.inversePrimary
     ) {
         Row(
-            modifier = Modifier.padding(16.dp),
+            modifier = Modifier.padding(8.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Column(modifier = Modifier.weight(1f).padding(16.dp)) {
                 Row(modifier = Modifier.padding(bottom = 16.dp)) {
                     if (professor.title.isNotEmpty()) {
                         Text(
-                            text = professor.title + "  ",
+                            text = "${professor.title} ",
                             fontWeight = FontWeight.Bold,
                             fontSize = nameTextSize
                         )
                     }
+                    if (nameLength < 30) {
+                        Text(
+                            text = "${professor.firstName} ",
+                            fontSize = nameTextSize
+                        )
+                    }
                     Text(
-                        text = professor.firstName + "  ",
-                        fontSize = nameTextSize
-                    )
-                    Text(
-                        text = professor.lastName,
+                        text = "${professor.lastName} ",
                         fontWeight = FontWeight.Bold,
                         fontSize = nameTextSize
                     )
                 }
-                Row(modifier = Modifier.padding(bottom = 8.dp)) {
+                Row(
+                    modifier = Modifier.padding(bottom = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
                     val mailString = buildAnnotatedString {
-                        withStyle(style = SpanStyle(textDecoration = TextDecoration.Underline)) {
+                        withStyle(
+                            style = SpanStyle(
+                                color = MaterialTheme.colorScheme.primary,
+                                textDecoration = TextDecoration.Underline
+                            )
+                        ) {
                             append(professor.email)
                         }
                     }
@@ -132,9 +144,14 @@ fun ProfessorCard(professor: ProfessorModel) {
                         }
                     )
                 }
-                Row {
+                Row(verticalAlignment = Alignment.CenterVertically) {
                     val phoneString = buildAnnotatedString {
-                        withStyle(style = SpanStyle(textDecoration = TextDecoration.Underline)) {
+                        withStyle(
+                            style = SpanStyle(
+                                color = MaterialTheme.colorScheme.primary,
+                                textDecoration = TextDecoration.Underline
+                            )
+                        ) {
                             append(professor.phoneNumber)
                         }
                     }
