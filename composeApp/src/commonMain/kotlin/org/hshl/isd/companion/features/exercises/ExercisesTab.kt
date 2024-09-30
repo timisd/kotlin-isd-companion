@@ -1,7 +1,7 @@
 package org.hshl.isd.companion.features.exercises
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.FitnessCenter
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
@@ -15,7 +15,7 @@ object ExercisesTab : Tab {
         @Composable
         get() {
             val title = "Exercises"
-            val icon = rememberVectorPainter(Icons.Default.Edit)
+            val icon = rememberVectorPainter(Icons.Filled.FitnessCenter)
 
             return remember {
                 TabOptions(

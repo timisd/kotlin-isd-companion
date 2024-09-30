@@ -134,7 +134,7 @@ fun ProfessorCard(professor: ProfessorModel) {
                         }
                     }
                     Text(
-                        text = "E-Mail:  ",
+                        text = "E-Mail: ",
                         fontWeight = FontWeight.Bold
                     )
                     ClickableText(
@@ -156,7 +156,7 @@ fun ProfessorCard(professor: ProfessorModel) {
                         }
                     }
                     Text(
-                        text = "Tel.:  ",
+                        text = "Telefon: ",
                         fontWeight = FontWeight.Bold
                     )
                     ClickableText(

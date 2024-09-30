@@ -1,7 +1,7 @@
 package org.hshl.isd.companion.features.cafeteria
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ShoppingCart
+import androidx.compose.material.icons.filled.RestaurantMenu
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
@@ -15,7 +15,7 @@ object CafeteriaTab : Tab {
         @Composable
         get() {
             val title = "Cafeteria"
-            val icon = rememberVectorPainter(Icons.Default.ShoppingCart)
+            val icon = rememberVectorPainter(Icons.Filled.RestaurantMenu)
 
             return remember {
                 TabOptions(

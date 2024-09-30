@@ -1,7 +1,7 @@
 package org.hshl.isd.companion.features.courses
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.CalendarMonth
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
@@ -15,7 +15,7 @@ object CoursesTab : Tab {
         @Composable
         get() {
             val title = "Courses"
-            val icon = rememberVectorPainter(Icons.Default.Menu)
+            val icon = rememberVectorPainter(Icons.Filled.CalendarMonth)
 
             return remember {
                 TabOptions(

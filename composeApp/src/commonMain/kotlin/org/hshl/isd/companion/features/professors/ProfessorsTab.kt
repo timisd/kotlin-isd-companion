@@ -1,7 +1,7 @@
 package org.hshl.isd.companion.features.professors
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.School
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
@@ -15,7 +15,7 @@ object ProfessorsTab : Tab {
         @Composable
         get() {
             val title = "Profs"
-            val icon = rememberVectorPainter(Icons.Default.Person)
+            val icon = rememberVectorPainter(Icons.Filled.School)
 
             return remember {
                 TabOptions(

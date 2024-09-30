@@ -15,7 +15,7 @@ object SettingsTab : Tab {
         @Composable
         get() {
             val title = "Settings"
-            val icon = rememberVectorPainter(Icons.Default.Settings)
+            val icon = rememberVectorPainter(Icons.Filled.Settings)
 
             return remember {
                 TabOptions(
