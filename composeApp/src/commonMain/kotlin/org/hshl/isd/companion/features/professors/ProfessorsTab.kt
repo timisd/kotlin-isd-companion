@@ -1,7 +1,7 @@
-package features.courses
+package org.hshl.isd.companion.features.professors
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
@@ -10,12 +10,12 @@ import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
 import cafe.adriel.voyager.transitions.SlideTransition
 
-object CoursesTab : Tab {
+object ProfessorsTab : Tab {
     override val options: TabOptions
         @Composable
         get() {
-            val title = "Courses"
-            val icon = rememberVectorPainter(Icons.Default.Menu)
+            val title = "Profs"
+            val icon = rememberVectorPainter(Icons.Default.Person)
 
             return remember {
                 TabOptions(
@@ -28,7 +28,7 @@ object CoursesTab : Tab {
 
     @Composable
     override fun Content() {
-        Navigator(screen = CoursesScreen()) { navigator ->
+        Navigator(screen = ProfessorsScreen()) { navigator ->
             SlideTransition(navigator = navigator)
         }
     }

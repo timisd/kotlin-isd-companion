@@ -1,4 +1,4 @@
-package features.exercises
+package org.hshl.isd.companion.features.exercises
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Edit

@@ -1,4 +1,4 @@
-package features.cafeteria
+package org.hshl.isd.companion.features.cafeteria
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

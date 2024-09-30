@@ -1,4 +1,4 @@
-package features.professors
+package org.hshl.isd.companion.features.courses
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -12,7 +12,7 @@ import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 
-class ProfessorsScreen : Screen {
+class CoursesScreen : Screen {
     @Composable
     override fun Content() {
         val navigator: Navigator = LocalNavigator.currentOrThrow
@@ -22,7 +22,7 @@ class ProfessorsScreen : Screen {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center,
         ) {
-            Text(text = "Profs")
+            Text(text = "Courses")
         }
     }
 }

@@ -31,6 +31,11 @@ kotlin {
     }
 
     sourceSets {
+        all {
+            languageSettings {
+                optIn("org.jetbrains.compose.resources.ExperimentalResourceApi")
+            }
+        }
         val desktopMain by getting
 
         androidMain.dependencies {
@@ -51,6 +56,13 @@ kotlin {
             implementation(libs.voyager.navigator)
             implementation(libs.voyager.tab.navigator)
             implementation(libs.voyager.transitions)
+
+            implementation(compose.material3)
+            implementation(compose.materialIconsExtended)
+
+            implementation(libs.kotlinx.serialization.json)
+            @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
+            implementation(compose.components.resources)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
@@ -94,6 +106,9 @@ android {
     dependencies {
         debugImplementation(compose.uiTooling)
     }
+}
+dependencies {
+    implementation(libs.androidx.runtime.android)
 }
 
 compose.desktop {

@@ -12,11 +12,11 @@ import cafe.adriel.voyager.navigator.tab.CurrentTab
 import cafe.adriel.voyager.navigator.tab.LocalTabNavigator
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabNavigator
-import features.cafeteria.CafeteriaTab
-import features.courses.CoursesTab
-import features.exercises.ExercisesTab
-import features.professors.ProfessorsTab
-import features.settings.SettingsTab
+import org.hshl.isd.companion.features.cafeteria.CafeteriaTab
+import org.hshl.isd.companion.features.courses.CoursesTab
+import org.hshl.isd.companion.features.exercises.ExercisesTab
+import org.hshl.isd.companion.features.professors.ProfessorsTab
+import org.hshl.isd.companion.features.settings.SettingsTab
 
 @Composable
 fun App() {

@@ -1,4 +1,4 @@
-package features.settings
+package org.hshl.isd.companion.features.settings
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
