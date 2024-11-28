@@ -55,7 +55,6 @@ class ProfessorsScreen : Screen {
 
         Column(
             modifier = Modifier
-                .padding(bottom = 24.dp)
                 .fillMaxSize()
                 .clickable(
                     interactionSource = remember { MutableInteractionSource() },
@@ -74,7 +73,7 @@ class ProfessorsScreen : Screen {
             LazyColumn(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(bottom = 56.dp)
+                    .padding(bottom = 80.dp)
             ) {
                 items(profs.filter { it.matchesSearchQuery(searchQuery) }) { professor ->
                     ProfessorCard(professor = professor)

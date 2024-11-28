@@ -28,7 +28,7 @@ fun App() {
 
     MaterialTheme(colorScheme = colorScheme) {
         TabNavigator(
-            tab = CafeteriaTab
+            tab = ExercisesTab
         ) {
             Scaffold(
                 modifier = Modifier.fillMaxSize(),
