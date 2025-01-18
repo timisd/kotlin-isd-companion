@@ -15,6 +15,7 @@ kotlin {
         compilations.all {
             kotlinOptions {
                 jvmTarget = "1.8"
+                freeCompilerArgs += listOf("-Xexpect-actual-classes")
             }
         }
     }
@@ -26,6 +27,8 @@ kotlin {
     ).forEach { target ->
         target.binaries.framework {
             baseName = "ComposeApp"
+            // freeCompilerArgs += "-Xbinary=bundleId=de.hshl.isd.companion"
+            isStatic = true
         }
     }
     
@@ -35,10 +38,12 @@ kotlin {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.ktor.client.android)
+            implementation(libs.kotlinx.coroutines.android)
         }
 
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)
+            implementation(libs.kotlinx.coroutines.core)
         }
 
         commonMain.dependencies {

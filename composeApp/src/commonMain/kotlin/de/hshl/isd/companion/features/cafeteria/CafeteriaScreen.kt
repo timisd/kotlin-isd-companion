@@ -4,8 +4,8 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.NavigateBefore
-import androidx.compose.material.icons.filled.NavigateNext
+import androidx.compose.material.icons.automirrored.filled.NavigateBefore
+import androidx.compose.material.icons.automirrored.filled.NavigateNext
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -51,7 +51,7 @@ class CafeteriaScreen : Screen {
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 IconButton(onClick = { viewModel.navigateDate(forward = false) }) {
-                    Icon(Icons.Default.NavigateBefore, contentDescription = "Previous day")
+                    Icon(Icons.AutoMirrored.Filled.NavigateBefore, contentDescription = "Previous day")
                 }
                 
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
@@ -66,7 +66,7 @@ class CafeteriaScreen : Screen {
                 }
                 
                 IconButton(onClick = { viewModel.navigateDate(forward = true) }) {
-                    Icon(Icons.Default.NavigateNext, contentDescription = "Next day")
+                    Icon(Icons.AutoMirrored.Filled.NavigateNext, contentDescription = "Next day")
                 }
             }
 
