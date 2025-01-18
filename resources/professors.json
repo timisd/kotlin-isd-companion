@@ -1,0 +1,109 @@
+{
+  "professors": [
+    {
+      "id": 1,
+      "title": "Prof. Dr.",
+      "firstName": "Holger",
+      "lastName": "Glasmachers",
+      "email": "holger.glasmachers@hshl.de",
+      "phone": "+49 (0)2381 8789-429"
+    },
+    {
+      "id": 2,
+      "title": "Prof. Dr.",
+      "firstName": "Julia",
+      "lastName": "Grewe",
+      "email": "julia.grewe@hshl.de",
+      "phone": "+49 (0)2381 8789-418"
+    },
+    {
+      "id": 3,
+      "title": "M. Sc.",
+      "firstName": "Daniel",
+      "lastName": "Kientopf",
+      "email": "daniel.kientopf@hshl.de",
+      "phone": "+49 (0)2381 8789-451"
+    },
+    {
+      "id": 4,
+      "title": "Prof. Dr.",
+      "firstName": "Thomas",
+      "lastName": "Kirner",
+      "email": "thomas.kirner@hshl.de",
+      "phone": "+49 (0)2381 8789-407"
+    },
+    {
+      "id": 5,
+      "title": "Prof. Dr.",
+      "firstName": "Robin",
+      "lastName": "Nunkesser",
+      "email": "robin.nunkesser@hshl.de",
+      "phone": "+49 (0)2381 8789-442"
+    },
+    {
+      "id": 6,
+      "title": "Prof. Dr.-Ing.",
+      "firstName": "Jan",
+      "lastName": "Pelzl",
+      "email": "jan.pelzl@hshl.de",
+      "phone": "+49 (0)2381 8789-476"
+    },
+    {
+      "id": 7,
+      "title": "Prof. Dr.",
+      "firstName": "Eva",
+      "lastName": "Ponick",
+      "email": "eva.ponick@hshl.de",
+      "phone": "+49 (0)2381 8789-439"
+    },
+    {
+      "id": 8,
+      "title": "Prof. Dr.",
+      "firstName": "Zoia",
+      "lastName": "Runovska",
+      "email": "zoia.runovska@hshl.de",
+      "phone": "+49 (0)2381 8789-426"
+    },
+    {
+      "id": 9,
+      "title": "",
+      "firstName": "Joachim",
+      "lastName": "Strack",
+      "email": "joachim.strack@hshl.de",
+      "phone": "+49 (0)2381 8789-493"
+    },
+    {
+      "id": 10,
+      "title": "Prof. Dr.-Ing.",
+      "firstName": "Alexander",
+      "lastName": "Stuckenholz",
+      "email": "alexander.stuckenholz@hshl.de",
+      "phone": "+49 (0)2381 8789-431"
+    },
+    {
+      "id": 11,
+      "title": "Prof. Dr.",
+      "firstName": "Jens",
+      "lastName": "Thorn",
+      "email": "jens.thorn@hshl.de",
+      "phone": "+49 (0)2381 8789-437"
+    },
+    {
+      "id": 12,
+      "title": "Prof. Dr.",
+      "firstName": "Lara",
+      "lastName": "Tickenbrock",
+      "email": "lara.tickenbrock@hshl.de",
+      "phone": "+49 (0)2381 8789-405"
+    },
+    {
+      "id": 13,
+      "title": "Prof. Dr.-Ing.",
+      "firstName": "Alf",
+      "lastName": "Zips",
+      "email": "alf.zips@hshl.de",
+      "phone": "+49 (0) 2381 8789-449"
+    }
+  ],
+  "last_updated": "2024-03-19"
+} 
