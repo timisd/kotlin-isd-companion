@@ -6,7 +6,8 @@
       "firstName": "Holger",
       "lastName": "Glasmachers",
       "email": "holger.glasmachers@hshl.de",
-      "phone": "+49 (0)2381 8789-429"
+      "phone": "+49 (0)2381 8789-429",
+      "imageUrl": "https://placekitten.com/200/201"
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "firstName": "Julia",
       "lastName": "Grewe",
       "email": "julia.grewe@hshl.de",
-      "phone": "+49 (0)2381 8789-418"
+      "phone": "+49 (0)2381 8789-418",
+      "imageUrl": "https://placekitten.com/200/202"
     },
     {
       "id": 3,
@@ -22,7 +24,8 @@
       "firstName": "Daniel",
       "lastName": "Kientopf",
       "email": "daniel.kientopf@hshl.de",
-      "phone": "+49 (0)2381 8789-451"
+      "phone": "+49 (0)2381 8789-451",
+      "imageUrl": "https://placekitten.com/200/203"
     },
     {
       "id": 4,
@@ -30,7 +33,8 @@
       "firstName": "Thomas",
       "lastName": "Kirner",
       "email": "thomas.kirner@hshl.de",
-      "phone": "+49 (0)2381 8789-407"
+      "phone": "+49 (0)2381 8789-407",
+      "imageUrl": "https://placekitten.com/200/204"
     },
     {
       "id": 5,
@@ -38,7 +42,8 @@
       "firstName": "Robin",
       "lastName": "Nunkesser",
       "email": "robin.nunkesser@hshl.de",
-      "phone": "+49 (0)2381 8789-442"
+      "phone": "+49 (0)2381 8789-442",
+      "imageUrl": "https://placekitten.com/200/205"
     },
     {
       "id": 6,
@@ -46,7 +51,8 @@
       "firstName": "Jan",
       "lastName": "Pelzl",
       "email": "jan.pelzl@hshl.de",
-      "phone": "+49 (0)2381 8789-476"
+      "phone": "+49 (0)2381 8789-476",
+      "imageUrl": "https://placekitten.com/200/206"
     },
     {
       "id": 7,
@@ -54,7 +60,8 @@
       "firstName": "Eva",
       "lastName": "Ponick",
       "email": "eva.ponick@hshl.de",
-      "phone": "+49 (0)2381 8789-439"
+      "phone": "+49 (0)2381 8789-439",
+      "imageUrl": "https://placekitten.com/200/207"
     },
     {
       "id": 8,
@@ -62,7 +69,8 @@
       "firstName": "Zoia",
       "lastName": "Runovska",
       "email": "zoia.runovska@hshl.de",
-      "phone": "+49 (0)2381 8789-426"
+      "phone": "+49 (0)2381 8789-426",
+      "imageUrl": "https://placekitten.com/200/208"
     },
     {
       "id": 9,
@@ -70,7 +78,8 @@
       "firstName": "Joachim",
       "lastName": "Strack",
       "email": "joachim.strack@hshl.de",
-      "phone": "+49 (0)2381 8789-493"
+      "phone": "+49 (0)2381 8789-493",
+      "imageUrl": "https://placekitten.com/200/209"
     },
     {
       "id": 10,
@@ -78,7 +87,8 @@
       "firstName": "Alexander",
       "lastName": "Stuckenholz",
       "email": "alexander.stuckenholz@hshl.de",
-      "phone": "+49 (0)2381 8789-431"
+      "phone": "+49 (0)2381 8789-431",
+      "imageUrl": "https://placekitten.com/200/210"
     },
     {
       "id": 11,
@@ -86,7 +96,8 @@
       "firstName": "Jens",
       "lastName": "Thorn",
       "email": "jens.thorn@hshl.de",
-      "phone": "+49 (0)2381 8789-437"
+      "phone": "+49 (0)2381 8789-437",
+      "imageUrl": "https://placekitten.com/200/211"
     },
     {
       "id": 12,
@@ -94,7 +105,8 @@
       "firstName": "Lara",
       "lastName": "Tickenbrock",
       "email": "lara.tickenbrock@hshl.de",
-      "phone": "+49 (0)2381 8789-405"
+      "phone": "+49 (0)2381 8789-405",
+      "imageUrl": "https://placekitten.com/200/212"
     },
     {
       "id": 13,
@@ -102,7 +114,8 @@
       "firstName": "Alf",
       "lastName": "Zips",
       "email": "alf.zips@hshl.de",
-      "phone": "+49 (0) 2381 8789-449"
+      "phone": "+49 (0) 2381 8789-449",
+      "imageUrl": "https://placekitten.com/200/213"
     }
   ],
   "last_updated": "2024-03-19"
