@@ -7,11 +7,10 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
+    kotlin("plugin.serialization") version "1.9.21"
 }
 
 kotlin {
-    // jvm()
-    
     androidTarget {
         compilations.all {
             kotlinOptions {
@@ -31,11 +30,17 @@ kotlin {
     }
     
     sourceSets {
-        
+
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.ktor.client.android)
         }
+
+        iosMain.dependencies {
+            implementation(libs.ktor.client.darwin)
+        }
+
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
@@ -56,6 +61,20 @@ kotlin {
             implementation(libs.kotlinx.serialization.json)
             @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
+
+            // Ktor client dependencies
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.client.content.negotiation)
+            implementation(libs.ktor.serialization.kotlinx.json)
+            
+            // Kotlinx datetime
+            implementation(libs.kotlinx.datetime)
+            
+            // Kotlinx serialization
+            implementation(libs.kotlinx.serialization.json)
+
+            // Add coroutines dependency
+            implementation(libs.kotlinx.coroutines.core)
         }
     }
 }
@@ -82,12 +101,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
 
 dependencies {
     debugImplementation(compose.uiTooling)
 }
-
