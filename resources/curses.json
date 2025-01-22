@@ -1,0 +1,131 @@
+{
+  "last_updated": "2025-01-18",
+  "curses": [
+    {
+      "id": 1,
+      "professor_id": 2,
+      "name": "Personal Skills I VL / ÜB",
+      "room": "H1.2-E01-010",
+      "start_time": "09:00",
+      "end_time": "11:00",
+      "day_of_week": "1"
+    },
+    {
+      "id": 2,
+      "professor_id": 7,
+      "name": "Mathematik I VL",
+      "room": "H4.2-E00-100",
+      "start_time": "11:00",
+      "end_time": "13:00",
+      "day_of_week": "1"
+    },
+    {
+      "id": 3,
+      "professor_id": 3,
+      "name": "Physik VL",
+      "room": "H4.1-E00-020",
+      "start_time": "15:00",
+      "end_time": "17:00",
+      "day_of_week": "1"
+    },
+    {
+      "id": 4,
+      "professor_id": 7,
+      "name": "Mathematik I ÜB",
+      "room": "H4.1-E00-020",
+      "start_time": "17:00",
+      "end_time": "19:00",
+      "day_of_week": "1"
+    },
+    {
+      "id": 5,
+      "professor_id": 3,
+      "name": "Physik ÜB",
+      "room": "H4.3-E00-100",
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "day_of_week": "2"
+    },
+    {
+      "id": 6,
+      "professor_id": 9,
+      "name": "Technisches Englisch I VL+ÜB",
+      "room": "H4.3-E00-100",
+      "start_time": "11:00",
+      "end_time": "14:00",
+      "day_of_week": "2"
+    },
+    {
+      "id": 7,
+      "professor_id": 12,
+      "name": "Biologie VL",
+      "room": "H4.1-E00-130",
+      "start_time": "09:00",
+      "end_time": "11:00",
+      "day_of_week": "3"
+    },
+    {
+      "id": 8,
+      "professor_id": 7,
+      "name": "Mathematik I VL",
+      "room": "H4.1-E00-130",
+      "start_time": "11:00",
+      "end_time": "12:00",
+      "day_of_week": "3"
+    },
+    {
+      "id": 9,
+      "professor_id": 4,
+      "name": "Chemie VL",
+      "room": "H1.2-E01-020",
+      "start_time": "12:00",
+      "end_time": "14:00",
+      "day_of_week": "3"
+    },
+    {
+      "id": 10,
+      "professor_id": 10,
+      "name": "Grundlagen der Programmierung VL",
+      "room": "HAM 4",
+      "start_time": "14:00",
+      "end_time": "16:00",
+      "day_of_week": "3"
+    },
+    {
+      "id": 11,
+      "professor_id": 8,
+      "name": "Angleichungskurs Mathematik",
+      "room": "H4.1-E00-130",
+      "start_time": "16:00",
+      "end_time": "18:00",
+      "day_of_week": "3"
+    },
+    {
+      "id": 12,
+      "professor_id": 5,
+      "name": "Technische Informatik I VL",
+      "room": "H4.3-E00-110",
+      "start_time": "09:00",
+      "end_time": "11:00",
+      "day_of_week": "4"
+    },
+    {
+      "id": 13,
+      "professor_id": 5,
+      "name": "Technische Informatik I ÜB",
+      "room": "H4.2-E00-140",
+      "start_time": "11:00",
+      "end_time": "13:00",
+      "day_of_week": "4"
+    },
+    {
+      "id": 14,
+      "professor_id": 10,
+      "name": "Grundlagen der Programmierung ÜB",
+      "room": "H4.1-E00-130",
+      "start_time": "14:00",
+      "end_time": "16:00",
+      "day_of_week": "4"
+    }
+  ]
+}
