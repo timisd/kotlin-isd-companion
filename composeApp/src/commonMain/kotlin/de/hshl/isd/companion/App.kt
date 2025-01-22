@@ -1,8 +1,6 @@
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
@@ -21,18 +19,18 @@ import de.hshl.isd.companion.features.courses.CoursesTab
 import de.hshl.isd.companion.features.exercises.ExercisesTab
 import de.hshl.isd.companion.features.professors.ProfessorsTab
 import de.hshl.isd.companion.features.settings.SettingsTab
-import de.hshl.isd.companion.shared.utils.DarkColorScheme
-import de.hshl.isd.companion.shared.utils.LightColorScheme
+import de.hshl.isd.companion.ui.theme.CompanionTheme
+import de.hshl.isd.companion.ui.theme.ThemeManager
 
 private val storage = createStorage()
 
 @Composable
 fun App() {
-    val isDarkTheme = isSystemInDarkTheme()
-    val colorScheme = if (isDarkTheme) DarkColorScheme else LightColorScheme
-
     CompositionLocalProvider(LocalStorage provides storage) {
-        MaterialTheme(colorScheme = colorScheme) {
+        ThemeManager.initialize()
+        val isDarkMode = ThemeManager.isDarkMode
+
+        CompanionTheme(darkTheme = isDarkMode) {
             TabNavigator(
                 tab = ExercisesTab
             ) {

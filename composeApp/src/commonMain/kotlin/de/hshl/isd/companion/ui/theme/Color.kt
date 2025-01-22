@@ -1,4 +1,4 @@
-package de.hshl.isd.companion.shared.utils
+package de.hshl.isd.companion.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

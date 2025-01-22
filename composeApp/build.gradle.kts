@@ -113,4 +113,5 @@ android {
 
 dependencies {
     debugImplementation(compose.uiTooling)
+    implementation(compose.material3)
 }
