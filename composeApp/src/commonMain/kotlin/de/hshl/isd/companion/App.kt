@@ -12,6 +12,7 @@ import cafe.adriel.voyager.navigator.tab.CurrentTab
 import cafe.adriel.voyager.navigator.tab.LocalTabNavigator
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabNavigator
+import de.hshl.isd.companion.core.localization.LanguageManager
 import de.hshl.isd.companion.core.storage.LocalStorage
 import de.hshl.isd.companion.core.storage.createStorage
 import de.hshl.isd.companion.features.cafeteria.CafeteriaTab
@@ -28,7 +29,10 @@ private val storage = createStorage()
 fun App() {
     CompositionLocalProvider(LocalStorage provides storage) {
         ThemeManager.initialize()
+        LanguageManager.initialize()
+
         val isDarkMode = ThemeManager.isDarkMode
+        val currentLanguage = LanguageManager.currentLanguage
 
         CompanionTheme(darkTheme = isDarkMode) {
             TabNavigator(

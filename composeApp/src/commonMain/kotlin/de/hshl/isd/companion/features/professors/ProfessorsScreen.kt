@@ -43,6 +43,8 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import cafe.adriel.voyager.core.screen.Screen
+import de.hshl.isd.companion.core.localization.LanguageManager
+import de.hshl.isd.companion.core.localization.Strings
 import de.hshl.isd.companion.core.storage.LocalStorage
 import de.hshl.isd.companion.features.professors.model.Professor
 import de.hshl.isd.companion.features.professors.viewmodel.ProfessorsUiState
@@ -51,6 +53,8 @@ import de.hshl.isd.companion.shared.platform.openEmail
 import de.hshl.isd.companion.shared.platform.openPhone
 
 class ProfessorsScreen : Screen {
+    val currentLanguage = LanguageManager.currentLanguage
+
     @Composable
     override fun Content() {
         val storage = LocalStorage.current
@@ -58,6 +62,7 @@ class ProfessorsScreen : Screen {
         val focusManager = LocalFocusManager.current
         val viewModel = remember { ProfessorsViewModel(storage) }
         val state by viewModel.uiState.collectAsState()
+
 
         Column(
             modifier = Modifier
@@ -76,7 +81,7 @@ class ProfessorsScreen : Screen {
                     value = searchQuery,
                     onValueChange = { searchQuery = it },
                     modifier = Modifier.weight(1f),
-                    placeholder = { Text("Suchen...") },
+                    placeholder = { Text(Strings.get("search", currentLanguage)) },
                     singleLine = true
                 )
 
@@ -130,6 +135,7 @@ private fun ProfessorCard(professor: Professor) {
     val NAME_LENGTH_THRESHOLD = 25 // Characters threshold for line breaking
     val firstPartLength = professor.title.length + professor.firstName.length + 1
     val lastNameLength = professor.lastName.length
+    val currentLanguage = LanguageManager.currentLanguage
 
     Card(
         modifier = Modifier
@@ -212,7 +218,7 @@ private fun ProfessorCard(professor: Professor) {
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Text(
-                        text = "E-Mail: ",
+                        text = Strings.get("mail", currentLanguage) + ": ",
                         fontWeight = FontWeight.Bold,
                         fontSize = 14.sp
                     )
@@ -245,7 +251,7 @@ private fun ProfessorCard(professor: Professor) {
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Text(
-                        text = "Telefon: ",
+                        text = Strings.get("phone", currentLanguage) + ": ",
                         fontWeight = FontWeight.Bold,
                         fontSize = 14.sp
                     )

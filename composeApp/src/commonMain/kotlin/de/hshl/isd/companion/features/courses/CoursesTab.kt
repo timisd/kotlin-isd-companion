@@ -9,19 +9,20 @@ import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
 import cafe.adriel.voyager.transitions.SlideTransition
-import de.hshl.isd.companion.features.courses.CoursesScreen
+import de.hshl.isd.companion.core.localization.LanguageManager
+import de.hshl.isd.companion.core.localization.Strings
 
 object CoursesTab : Tab {
     override val options: TabOptions
         @Composable
         get() {
-            val title = "Courses"
             val icon = rememberVectorPainter(Icons.Filled.CalendarMonth)
+            val currentLanguage = LanguageManager.currentLanguage
 
-            return remember {
+            return remember(currentLanguage) {
                 TabOptions(
                     index = 0u,
-                    title = title,
+                    title = Strings.get("tab_courses", currentLanguage),
                     icon = icon
                 )
             }

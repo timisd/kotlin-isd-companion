@@ -1,25 +1,43 @@
 package de.hshl.isd.companion.features.courses
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Refresh
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.material3.Card
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
+import de.hshl.isd.companion.core.localization.LanguageManager
+import de.hshl.isd.companion.core.localization.Strings
 import de.hshl.isd.companion.core.storage.LocalStorage
-import de.hshl.isd.companion.features.courses.model.Course
 import de.hshl.isd.companion.features.courses.model.CourseWithProfessor
 import de.hshl.isd.companion.features.courses.viewmodel.CoursesUiState
 import de.hshl.isd.companion.features.courses.viewmodel.CoursesViewModel
 
 class CoursesScreen : Screen {
+    val currentLanguage = LanguageManager.currentLanguage
+
     @Composable
     override fun Content() {
         val storage = LocalStorage.current
@@ -36,7 +54,7 @@ class CoursesScreen : Screen {
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = "Stundenplan",
+                    text = Strings.get("schedule", currentLanguage),
                     style = MaterialTheme.typography.headlineSmall
                 )
                 IconButton(onClick = { viewModel.loadCourses(forceRefresh = true) }) {
@@ -76,8 +94,15 @@ class CoursesScreen : Screen {
 
 @Composable
 private fun WeeklySchedule(courses: List<CourseWithProfessor>) {
-    val dayNames = listOf("Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag")
-    
+    val currentLanguage = LanguageManager.currentLanguage
+    val dayNames = listOf(
+        Strings.get("monday", currentLanguage),
+        Strings.get("tuesday", currentLanguage),
+        Strings.get("wednesday", currentLanguage),
+        Strings.get("thursday", currentLanguage),
+        Strings.get("friday", currentLanguage)
+    )
+
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
@@ -86,7 +111,7 @@ private fun WeeklySchedule(courses: List<CourseWithProfessor>) {
         items(dayNames) { dayName ->
             val dayNumber = (dayNames.indexOf(dayName) + 1).toString()
             val daysCourses = courses.filter { it.course.day_of_week == dayNumber }
-            
+
             if (daysCourses.isNotEmpty()) {
                 DaySchedule(dayName = dayName, courses = daysCourses)
                 Spacer(modifier = Modifier.height(16.dp))
@@ -107,7 +132,7 @@ private fun DaySchedule(dayName: String, courses: List<CourseWithProfessor>) {
             fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(bottom = 8.dp)
         )
-        
+
         courses.sortedBy { it.course.start_time }.forEach { courseWithProf ->
             CourseCard(courseWithProf = courseWithProf)
             Spacer(modifier = Modifier.height(8.dp))
