@@ -105,8 +105,8 @@ private fun WeeklySchedule(courses: List<CourseWithProfessor>) {
 
     LazyColumn(
         modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp)
+            .fillMaxWidth()
+            .padding(16.dp, 16.dp, 16.dp, 72.dp)
     ) {
         items(dayNames) { dayName ->
             val dayNumber = (dayNames.indexOf(dayName) + 1).toString()

@@ -110,7 +110,7 @@ class CafeteriaScreen : Screen {
                         }
                     } else {
                         LazyColumn(
-                            modifier = Modifier.fillMaxSize(),
+                            modifier = Modifier.fillMaxSize().padding(bottom = 80.dp),
                             verticalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
                             items(currentState.menu.flatMap { it.meals }) { meal ->

@@ -62,8 +62,7 @@ class ProfessorsScreen : Screen {
         val focusManager = LocalFocusManager.current
         val viewModel = remember { ProfessorsViewModel(storage) }
         val state by viewModel.uiState.collectAsState()
-
-
+        
         Column(
             modifier = Modifier
                 .fillMaxSize()
