@@ -1,4 +1,4 @@
-package de.hshl.isd.companion.shared.platform
+package de.hshl.isd.companion.core.textinteraction
 
 expect fun openEmail(email: String, context: Any)
 

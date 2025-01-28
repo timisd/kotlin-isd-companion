@@ -1,4 +1,4 @@
-package de.hshl.isd.companion.shared.platform
+package de.hshl.isd.companion.core.textinteraction
 
 import android.content.Context
 import android.content.Intent

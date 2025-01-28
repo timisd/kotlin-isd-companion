@@ -1,4 +1,4 @@
-package de.hshl.isd.companion.shared.platform
+package de.hshl.isd.companion.core.images
 
 import android.graphics.BitmapFactory
 import androidx.compose.runtime.Composable

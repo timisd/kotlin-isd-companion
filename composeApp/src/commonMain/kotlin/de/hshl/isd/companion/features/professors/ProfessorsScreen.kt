@@ -46,11 +46,11 @@ import cafe.adriel.voyager.core.screen.Screen
 import de.hshl.isd.companion.core.localization.LanguageManager
 import de.hshl.isd.companion.core.localization.Strings
 import de.hshl.isd.companion.core.storage.LocalStorage
+import de.hshl.isd.companion.core.textinteraction.openEmail
+import de.hshl.isd.companion.core.textinteraction.openPhone
 import de.hshl.isd.companion.features.professors.model.Professor
 import de.hshl.isd.companion.features.professors.viewmodel.ProfessorsUiState
 import de.hshl.isd.companion.features.professors.viewmodel.ProfessorsViewModel
-import de.hshl.isd.companion.shared.platform.openEmail
-import de.hshl.isd.companion.shared.platform.openPhone
 
 class ProfessorsScreen : Screen {
     val currentLanguage = LanguageManager.currentLanguage

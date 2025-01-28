@@ -1,4 +1,4 @@
-package de.hshl.isd.companion.shared.platform
+package de.hshl.isd.companion.core.textinteraction
 
 import platform.Foundation.NSURL
 import platform.UIKit.UIApplication
