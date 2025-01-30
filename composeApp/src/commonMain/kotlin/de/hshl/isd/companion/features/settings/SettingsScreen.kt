@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
 import de.hshl.isd.companion.core.localization.LanguageManager
+import de.hshl.isd.companion.core.localization.LanguageManager.currentLanguage
 import de.hshl.isd.companion.core.localization.Strings
 import de.hshl.isd.companion.core.storage.LocalStorage
 import de.hshl.isd.companion.ui.theme.ThemeManager
@@ -34,7 +35,6 @@ class SettingsScreen : Screen {
         var isDarkMode by remember { mutableStateOf(ThemeManager.isDarkMode) }
         val storage = LocalStorage.current
         val scope = rememberCoroutineScope()
-        val currentLanguage = LanguageManager.currentLanguage
         var showLanguageDialog by remember { mutableStateOf(false) }
 
         Column(

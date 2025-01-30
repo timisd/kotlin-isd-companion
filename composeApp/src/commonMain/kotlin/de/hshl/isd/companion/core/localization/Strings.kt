@@ -35,6 +35,26 @@ object Strings {
             "wednesday" to "Wednesday",
             "thursday" to "Thursday",
             "friday" to "Friday",
+            "networking" to "Networking",
+            "operating_systems" to "Operating Systems",
+            "computer_engineering" to "Computer Engineering",
+
+            "binary_to_decimal" to "Binary to Decimal",
+            "decimal_to_binary" to "Decimal to Binary",
+            "binary_addition" to "Binary Addition",
+            "twos_complement" to "Two's Complement",
+
+            "bit_encoding" to "Bit Encoding",
+            "crc" to "CRC",
+            "minimal_spanning_tree" to "Minimal Spanning Tree",
+            "shortest_path" to "Shortest Path",
+            "netmask" to "Netmask",
+
+            "page_replacement" to "Page Replacement",
+            "buddy" to "Buddy",
+            "scheduling" to "Scheduling",
+            "realtime_scheduling" to "Realtime Scheduling",
+            "quiz" to "Quiz",
 
             "tab_settings" to "Settings",
             "tab_courses" to "Courses",
@@ -65,12 +85,32 @@ object Strings {
             "wednesday" to "Mittwoch",
             "thursday" to "Donnerstag",
             "friday" to "Freitag",
+            "networking" to "Netzwerke",
+            "operating_systems" to "Betriebssysteme",
+            "computer_engineering" to "Technische Informatik",
 
             "tab_settings" to "Einstellungen",
             "tab_courses" to "Kurse",
             "tab_professors" to "Profs",
             "tab_exercises" to "Übungen",
-            "tab_cafeteria" to "Mensa"
+            "tab_cafeteria" to "Mensa",
+
+            "binary_to_decimal" to "Binär zu Dezimal",
+            "decimal_to_binary" to "Dezimal zu Binär",
+            "binary_addition" to "Addition binärer Zahlen",
+            "twos_complement" to "Zweierkomplement",
+
+            "bit_encoding" to "Bitcodierung",
+            "crc" to "CRC",
+            "minimal_spanning_tree" to "Minimaler Spannbaum",
+            "shortest_path" to "Kürzester Weg",
+            "netmask" to "Netzmasken",
+
+            "page_replacement" to "Seitenersetzung",
+            "buddy" to "Buddy",
+            "scheduling" to "Scheduling",
+            "realtime_scheduling" to "Echtzeit-Scheduling",
+            "quiz" to "Quiz"
         )
     )
 

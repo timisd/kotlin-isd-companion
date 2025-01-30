@@ -32,7 +32,6 @@ fun App() {
         LanguageManager.initialize()
 
         val isDarkMode = ThemeManager.isDarkMode
-        val currentLanguage = LanguageManager.currentLanguage
 
         CompanionTheme(darkTheme = isDarkMode) {
             TabNavigator(

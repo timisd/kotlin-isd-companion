@@ -7,7 +7,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
-import de.hshl.isd.companion.core.localization.LanguageManager
+import de.hshl.isd.companion.core.localization.LanguageManager.currentLanguage
 import de.hshl.isd.companion.core.localization.Strings
 
 internal object ProfessorsTab : Tab {
@@ -15,7 +15,6 @@ internal object ProfessorsTab : Tab {
         @Composable
         get() {
             val icon = rememberVectorPainter(Icons.Filled.School)
-            val currentLanguage = LanguageManager.currentLanguage
 
             return remember(currentLanguage) {
                 TabOptions(

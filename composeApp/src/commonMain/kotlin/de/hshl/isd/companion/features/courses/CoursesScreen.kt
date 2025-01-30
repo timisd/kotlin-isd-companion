@@ -28,7 +28,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
-import de.hshl.isd.companion.core.localization.LanguageManager
+import de.hshl.isd.companion.core.localization.LanguageManager.currentLanguage
 import de.hshl.isd.companion.core.localization.Strings
 import de.hshl.isd.companion.core.storage.LocalStorage
 import de.hshl.isd.companion.features.courses.model.CourseWithProfessor
@@ -36,8 +36,6 @@ import de.hshl.isd.companion.features.courses.viewmodel.CoursesUiState
 import de.hshl.isd.companion.features.courses.viewmodel.CoursesViewModel
 
 class CoursesScreen : Screen {
-    val currentLanguage = LanguageManager.currentLanguage
-
     @Composable
     override fun Content() {
         val storage = LocalStorage.current
@@ -94,7 +92,6 @@ class CoursesScreen : Screen {
 
 @Composable
 private fun WeeklySchedule(courses: List<CourseWithProfessor>) {
-    val currentLanguage = LanguageManager.currentLanguage
     val dayNames = listOf(
         Strings.get("monday", currentLanguage),
         Strings.get("tuesday", currentLanguage),

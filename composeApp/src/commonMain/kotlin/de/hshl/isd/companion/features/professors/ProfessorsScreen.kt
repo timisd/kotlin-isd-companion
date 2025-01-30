@@ -43,7 +43,7 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import cafe.adriel.voyager.core.screen.Screen
-import de.hshl.isd.companion.core.localization.LanguageManager
+import de.hshl.isd.companion.core.localization.LanguageManager.currentLanguage
 import de.hshl.isd.companion.core.localization.Strings
 import de.hshl.isd.companion.core.storage.LocalStorage
 import de.hshl.isd.companion.core.textinteraction.openEmail
@@ -53,8 +53,6 @@ import de.hshl.isd.companion.features.professors.viewmodel.ProfessorsUiState
 import de.hshl.isd.companion.features.professors.viewmodel.ProfessorsViewModel
 
 class ProfessorsScreen : Screen {
-    val currentLanguage = LanguageManager.currentLanguage
-
     @Composable
     override fun Content() {
         val storage = LocalStorage.current
@@ -62,7 +60,7 @@ class ProfessorsScreen : Screen {
         val focusManager = LocalFocusManager.current
         val viewModel = remember { ProfessorsViewModel(storage) }
         val state by viewModel.uiState.collectAsState()
-        
+
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -134,7 +132,6 @@ private fun ProfessorCard(professor: Professor) {
     val NAME_LENGTH_THRESHOLD = 25 // Characters threshold for line breaking
     val firstPartLength = professor.title.length + professor.firstName.length + 1
     val lastNameLength = professor.lastName.length
-    val currentLanguage = LanguageManager.currentLanguage
 
     Card(
         modifier = Modifier

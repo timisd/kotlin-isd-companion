@@ -9,7 +9,7 @@ import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
 import cafe.adriel.voyager.transitions.SlideTransition
-import de.hshl.isd.companion.core.localization.LanguageManager
+import de.hshl.isd.companion.core.localization.LanguageManager.currentLanguage
 import de.hshl.isd.companion.core.localization.Strings
 
 object CoursesTab : Tab {
@@ -17,8 +17,6 @@ object CoursesTab : Tab {
         @Composable
         get() {
             val icon = rememberVectorPainter(Icons.Filled.CalendarMonth)
-            val currentLanguage = LanguageManager.currentLanguage
-
             return remember(currentLanguage) {
                 TabOptions(
                     index = 0u,

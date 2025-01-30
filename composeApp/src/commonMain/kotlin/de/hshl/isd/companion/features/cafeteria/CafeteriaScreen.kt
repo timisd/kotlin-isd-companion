@@ -28,7 +28,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
-import de.hshl.isd.companion.core.localization.LanguageManager
+import de.hshl.isd.companion.core.localization.LanguageManager.currentLanguage
 import de.hshl.isd.companion.core.localization.Strings
 import de.hshl.isd.companion.features.cafeteria.model.Meal
 import de.hshl.isd.companion.features.cafeteria.viewmodel.CafeteriaUiState
@@ -50,7 +50,6 @@ class CafeteriaScreen : Screen {
         val viewModel = remember { CafeteriaViewModel() }
         val state by viewModel.menuState.collectAsState()
         val currentDate by viewModel.currentDate.collectAsState()
-        val currentLanguage = LanguageManager.currentLanguage
 
         Column(
             modifier = Modifier.fillMaxSize().padding(16.dp),
