@@ -67,7 +67,11 @@ object Strings {
             "add_binary_numbers" to "Add these binary numbers:",
             "new_numbers" to "New Numbers",
             "show_solution_hint" to "Toggle the switch to see the solution",
-            "go_back" to "Go back"
+            "go_back" to "Go back",
+
+            "convert_binary_to_decimal" to "Convert this binary number to decimal:",
+            "decimal_value" to "Decimal value",
+            "new_number" to "New Number"
         ),
         "de" to mapOf(
             "settings" to "Einstellungen",
@@ -124,7 +128,11 @@ object Strings {
             "add_binary_numbers" to "Addiere diese Binärzahlen:",
             "new_numbers" to "Neue Zahlen",
             "show_solution_hint" to "Schalter umlegen um die Lösung zu sehen",
-            "go_back" to "Zurück"
+            "go_back" to "Zurück",
+
+            "convert_binary_to_decimal" to "Wandle diese Binärzahl in eine Dezimalzahl um:",
+            "decimal_value" to "Dezimalwert",
+            "new_number" to "Neue Zahl"
         )
     )
 
