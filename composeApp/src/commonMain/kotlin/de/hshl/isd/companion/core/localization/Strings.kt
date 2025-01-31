@@ -71,7 +71,10 @@ object Strings {
 
             "convert_binary_to_decimal" to "Convert this binary number to decimal:",
             "decimal_value" to "Decimal value",
-            "new_number" to "New Number"
+            "new_number" to "New Number",
+
+            "convert_decimal_to_binary" to "Convert this decimal number to binary:",
+            "binary_value" to "Binary value"
         ),
         "de" to mapOf(
             "settings" to "Einstellungen",
@@ -132,7 +135,10 @@ object Strings {
 
             "convert_binary_to_decimal" to "Wandle diese Binärzahl in eine Dezimalzahl um:",
             "decimal_value" to "Dezimalwert",
-            "new_number" to "Neue Zahl"
+            "new_number" to "Neue Zahl",
+
+            "convert_decimal_to_binary" to "Wandle diese Dezimalzahl in eine Binärzahl um:",
+            "binary_value" to "Binärwert"
         )
     )
 
