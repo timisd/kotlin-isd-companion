@@ -74,7 +74,16 @@ object Strings {
             "new_number" to "New Number",
 
             "convert_decimal_to_binary" to "Convert this decimal number to binary:",
-            "binary_value" to "Binary value"
+            "binary_value" to "Binary value",
+
+            "convert_to_twos_complement" to "Convert this number to two's complement:",
+            "original_binary" to "Original binary",
+            "inverted_binary" to "Inverted binary",
+            "twos_complement_result" to "Two's complement",
+            "step_by_step" to "Step by step",
+            "step_1" to "Step 1: Write the binary number",
+            "step_2" to "Step 2: Invert all bits",
+            "step_3" to "Step 3: Add 1 to the result"
         ),
         "de" to mapOf(
             "settings" to "Einstellungen",
@@ -138,7 +147,16 @@ object Strings {
             "new_number" to "Neue Zahl",
 
             "convert_decimal_to_binary" to "Wandle diese Dezimalzahl in eine Binärzahl um:",
-            "binary_value" to "Binärwert"
+            "binary_value" to "Binärwert",
+
+            "convert_to_twos_complement" to "Wandle diese Zahl in das Zweierkomplement um:",
+            "original_binary" to "Ursprüngliche Binärzahl",
+            "inverted_binary" to "Invertierte Binärzahl",
+            "twos_complement_result" to "Zweierkomplement",
+            "step_by_step" to "Schritt für Schritt",
+            "step_1" to "Schritt 1: Schreibe die Binärzahl",
+            "step_2" to "Schritt 2: Invertiere alle Bits",
+            "step_3" to "Schritt 3: Addiere 1 zum Ergebnis"
         )
     )
 
