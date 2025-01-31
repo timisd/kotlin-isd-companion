@@ -62,7 +62,12 @@ object Strings {
             "tab_courses" to "Courses",
             "tab_professors" to "Profs",
             "tab_exercises" to "Exercises",
-            "tab_cafeteria" to "Cafeteria"
+            "tab_cafeteria" to "Cafeteria",
+
+            "add_binary_numbers" to "Add these binary numbers:",
+            "new_numbers" to "New Numbers",
+            "show_solution_hint" to "Toggle the switch to see the solution",
+            "go_back" to "Go back"
         ),
         "de" to mapOf(
             "settings" to "Einstellungen",
@@ -114,7 +119,12 @@ object Strings {
             "scheduling" to "Scheduling",
             "realtime_scheduling" to "Echtzeit-Scheduling",
             "quiz" to "Quiz",
-            "os_quiz" to "Betriebssysteme Quiz"
+            "os_quiz" to "Betriebssysteme Quiz",
+
+            "add_binary_numbers" to "Addiere diese Binärzahlen:",
+            "new_numbers" to "Neue Zahlen",
+            "show_solution_hint" to "Schalter umlegen um die Lösung zu sehen",
+            "go_back" to "Zurück"
         )
     )
 
