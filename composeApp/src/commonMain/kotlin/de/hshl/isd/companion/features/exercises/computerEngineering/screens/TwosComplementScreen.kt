@@ -16,6 +16,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
+import de.hshl.isd.companion.core.localization.LanguageManager.currentLanguage
+import de.hshl.isd.companion.core.localization.Strings
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -25,7 +27,7 @@ fun TwosComplementScreen() {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Two's Complement") },
+                title = { Text(Strings.get("twos_complement", currentLanguage)) },
                 navigationIcon = {
                     IconButton(onClick = { navigator.pop() }) {
                         Icon(
@@ -43,8 +45,7 @@ fun TwosComplementScreen() {
                 .padding(paddingValues)
                 .padding(16.dp)
         ) {
-            Text("Two's Complement Exercise")
-            // Add your exercise content here
+
         }
     }
 }

@@ -16,6 +16,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
+import de.hshl.isd.companion.core.localization.LanguageManager.currentLanguage
+import de.hshl.isd.companion.core.localization.Strings
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -25,7 +27,7 @@ fun MinimalSpantreeScreen() {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Minimal Spanning Tree") },
+                title = { Text(Strings.get("minimal_spanning_tree", currentLanguage)) },
                 navigationIcon = {
                     IconButton(onClick = { navigator.pop() }) {
                         Icon(
@@ -43,8 +45,7 @@ fun MinimalSpantreeScreen() {
                 .padding(paddingValues)
                 .padding(16.dp)
         ) {
-            Text("Minimal Spanning Tree")
-            // Add your exercise content here
+
         }
     }
 }

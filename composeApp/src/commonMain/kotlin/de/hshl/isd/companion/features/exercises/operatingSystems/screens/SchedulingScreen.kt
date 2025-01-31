@@ -16,6 +16,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
+import de.hshl.isd.companion.core.localization.LanguageManager.currentLanguage
+import de.hshl.isd.companion.core.localization.Strings
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -25,7 +27,7 @@ fun SchedulingScreen() {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Scheduling") },
+                title = { Text(Strings.get("scheduling", currentLanguage)) },
                 navigationIcon = {
                     IconButton(onClick = { navigator.pop() }) {
                         Icon(
@@ -43,8 +45,7 @@ fun SchedulingScreen() {
                 .padding(paddingValues)
                 .padding(16.dp)
         ) {
-            Text("Scheduling")
-            // Add your exercise content here
+
         }
     }
 }

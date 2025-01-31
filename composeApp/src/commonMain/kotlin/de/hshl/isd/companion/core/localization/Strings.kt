@@ -49,12 +49,14 @@ object Strings {
             "minimal_spanning_tree" to "Minimal Spanning Tree",
             "shortest_path" to "Shortest Path",
             "netmask" to "Netmask",
+            "networking_quiz" to "Networking Quiz",
 
             "page_replacement" to "Page Replacement",
             "buddy" to "Buddy",
             "scheduling" to "Scheduling",
             "realtime_scheduling" to "Realtime Scheduling",
             "quiz" to "Quiz",
+            "os_quiz" to "Operating Systems Quiz",
 
             "tab_settings" to "Settings",
             "tab_courses" to "Courses",
@@ -105,12 +107,14 @@ object Strings {
             "minimal_spanning_tree" to "Minimaler Spannbaum",
             "shortest_path" to "Kürzester Weg",
             "netmask" to "Netzmasken",
+            "networking_quiz" to "Netzwerk Quiz",
 
             "page_replacement" to "Seitenersetzung",
             "buddy" to "Buddy",
             "scheduling" to "Scheduling",
             "realtime_scheduling" to "Echtzeit-Scheduling",
-            "quiz" to "Quiz"
+            "quiz" to "Quiz",
+            "os_quiz" to "Betriebssysteme Quiz"
         )
     )
 

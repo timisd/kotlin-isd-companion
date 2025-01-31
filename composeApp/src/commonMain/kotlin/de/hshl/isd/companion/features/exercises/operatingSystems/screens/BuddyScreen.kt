@@ -14,6 +14,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
+import de.hshl.isd.companion.core.localization.LanguageManager.currentLanguage
+import de.hshl.isd.companion.core.localization.Strings
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -23,7 +25,7 @@ fun BuddyScreen() {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Buddy System") },
+                title = { Text(Strings.get("buddy", currentLanguage)) },
                 navigationIcon = {
                     IconButton(onClick = { navigator.pop() }) {
                         Icon(
@@ -41,8 +43,7 @@ fun BuddyScreen() {
                 .padding(paddingValues)
                 .padding(16.dp)
         ) {
-            Text("Buddy System Exercise Content")
-            // Add your specific exercise content here
+
         }
     }
 } 

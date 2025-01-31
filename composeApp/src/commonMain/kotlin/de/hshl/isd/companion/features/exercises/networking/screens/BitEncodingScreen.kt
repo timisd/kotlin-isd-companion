@@ -16,6 +16,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
+import de.hshl.isd.companion.core.localization.LanguageManager.currentLanguage
+import de.hshl.isd.companion.core.localization.Strings
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -25,7 +27,7 @@ fun BitEncodingScreen() {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Bit Encoding") },
+                title = { Text(Strings.get("bit_encoding", currentLanguage)) },
                 navigationIcon = {
                     IconButton(onClick = { navigator.pop() }) {
                         Icon(
@@ -43,8 +45,7 @@ fun BitEncodingScreen() {
                 .padding(paddingValues)
                 .padding(16.dp)
         ) {
-            Text("Bit Encoding")
-            // Add your exercise content here
+
         }
     }
 }

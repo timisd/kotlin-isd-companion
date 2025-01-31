@@ -16,6 +16,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
+import de.hshl.isd.companion.core.localization.LanguageManager.currentLanguage
+import de.hshl.isd.companion.core.localization.Strings
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -25,7 +27,7 @@ fun CrcScreen() {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("CRC") },
+                title = { Text(Strings.get("crc", currentLanguage)) },
                 navigationIcon = {
                     IconButton(onClick = { navigator.pop() }) {
                         Icon(
@@ -43,8 +45,7 @@ fun CrcScreen() {
                 .padding(paddingValues)
                 .padding(16.dp)
         ) {
-            Text("CRC")
-            // Add your exercise content here
+
         }
     }
 }
