@@ -127,6 +127,7 @@ private fun DaySchedule(dayName: String, courses: List<CourseWithProfessor>) {
             text = dayName,
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.Bold,
+            color = MaterialTheme.colorScheme.primary,
             modifier = Modifier.padding(bottom = 8.dp)
         )
 
@@ -164,11 +165,13 @@ private fun CourseCard(courseWithProf: CourseWithProfessor) {
             ) {
                 Text(
                     text = "${courseWithProf.course.start_time} - ${courseWithProf.course.end_time}",
-                    style = MaterialTheme.typography.bodyMedium
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.primary
                 )
                 Text(
                     text = courseWithProf.course.room,
-                    style = MaterialTheme.typography.bodyMedium
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.primary
                 )
             }
         }

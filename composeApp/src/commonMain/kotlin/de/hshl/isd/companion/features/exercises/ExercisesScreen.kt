@@ -76,12 +76,13 @@ class ExercisesScreen : Screen {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.4f))
+                    .background(MaterialTheme.colorScheme.primary)
             ) {
                 Text(
                     text = title,
                     modifier = Modifier.padding(8.dp),
-                    fontWeight = FontWeight.Bold
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.background
                 )
             }
 

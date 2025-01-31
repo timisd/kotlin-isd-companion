@@ -75,7 +75,8 @@ class CafeteriaScreen : Screen {
                     )
                     Text(
                         text = formatDateGerman(currentDate),
-                        style = MaterialTheme.typography.headlineSmall
+                        style = MaterialTheme.typography.headlineSmall,
+                        color = MaterialTheme.colorScheme.primary
                     )
                 }
 
@@ -153,7 +154,7 @@ private fun MealCard(meal: Meal) {
             Text(
                 text = meal.category,
                 style = MaterialTheme.typography.labelMedium,
-                color = MaterialTheme.colorScheme.secondary
+                color = MaterialTheme.colorScheme.primary
             )
             Text(
                 text = meal.name,

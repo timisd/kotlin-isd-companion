@@ -19,7 +19,7 @@ object CoursesTab : Tab {
             val icon = rememberVectorPainter(Icons.Filled.CalendarMonth)
             return remember(currentLanguage) {
                 TabOptions(
-                    index = 0u,
+                    index = 2u,
                     title = Strings.get("tab_courses", currentLanguage),
                     icon = icon
                 )

@@ -31,7 +31,6 @@ class CoursesApi(private val storage: Storage) {
             val cachedData = storage.getString(STORAGE_KEY_DATA)
             if (cachedData != null) {
                 try {
-                    println("Using cached data: $cachedData")
                     return json.decodeFromString(cachedData)
                 } catch (e: Exception) {
                     println("Error decoding cached data: ${e.message}")
@@ -42,8 +41,7 @@ class CoursesApi(private val storage: Storage) {
         return try {
             val response = client.get(apiUrl)
             val text = response.bodyAsText()
-            println("Received JSON from network: $text")
-            
+
             try {
                 val coursesResponse = json.decodeFromString<CoursesResponse>(text)
                 storage.saveString(STORAGE_KEY_DATA, text)

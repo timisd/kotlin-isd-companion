@@ -1,13 +1,17 @@
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.navigator.tab.CurrentTab
 import cafe.adriel.voyager.navigator.tab.LocalTabNavigator
 import cafe.adriel.voyager.navigator.tab.Tab
@@ -20,7 +24,7 @@ import de.hshl.isd.companion.features.courses.CoursesTab
 import de.hshl.isd.companion.features.exercises.ExercisesTab
 import de.hshl.isd.companion.features.professors.ProfessorsTab
 import de.hshl.isd.companion.features.settings.SettingsTab
-import de.hshl.isd.companion.ui.theme.CompanionTheme
+import de.hshl.isd.companion.ui.CompanionTheme
 import de.hshl.isd.companion.ui.theme.ThemeManager
 
 private val storage = createStorage()
@@ -34,22 +38,34 @@ fun App() {
         val isDarkMode = ThemeManager.isDarkMode
 
         CompanionTheme(darkTheme = isDarkMode) {
-            TabNavigator(
-                tab = ExercisesTab
+            Surface(
+                color = MaterialTheme.colorScheme.background,
+                modifier = Modifier.fillMaxSize()
             ) {
-                Scaffold(
-                    modifier = Modifier.fillMaxSize(),
-                    bottomBar = {
-                        NavigationBar {
-                            TabNavigationItem(CafeteriaTab)
-                            TabNavigationItem(ExercisesTab)
-                            TabNavigationItem(CoursesTab)
-                            TabNavigationItem(ProfessorsTab)
-                            TabNavigationItem(SettingsTab)
-                        }
-                    },
-                    content = { CurrentTab() },
-                )
+                TabNavigator(tab = ExercisesTab) {
+                    Scaffold(
+                        modifier = Modifier.fillMaxSize(),
+                        containerColor = MaterialTheme.colorScheme.background,
+                        bottomBar = {
+                            Surface(
+                                color = MaterialTheme.colorScheme.background,
+                                modifier = Modifier
+                            ) {
+                                NavigationBar(
+                                    containerColor = MaterialTheme.colorScheme.background,
+                                    tonalElevation = 0.dp
+                                ) {
+                                    TabNavigationItem(CafeteriaTab)
+                                    TabNavigationItem(ExercisesTab)
+                                    TabNavigationItem(CoursesTab)
+                                    TabNavigationItem(ProfessorsTab)
+                                    TabNavigationItem(SettingsTab)
+                                }
+                            }
+                        },
+                        content = { CurrentTab() }
+                    )
+                }
             }
         }
     }
@@ -58,22 +74,31 @@ fun App() {
 @Composable
 private fun RowScope.TabNavigationItem(tab: Tab) {
     val tabNavigator: TabNavigator = LocalTabNavigator.current
+    val isSelected = tabNavigator.current == tab
 
     NavigationBarItem(
-        selected = tabNavigator.current == tab,
+        selected = isSelected,
         onClick = { tabNavigator.current = tab },
+        colors = NavigationBarItemDefaults.colors(
+            selectedIconColor = MaterialTheme.colorScheme.primary,
+            selectedTextColor = MaterialTheme.colorScheme.primary,
+            unselectedIconColor = MaterialTheme.colorScheme.onSurfaceVariant,
+            unselectedTextColor = MaterialTheme.colorScheme.onSurfaceVariant,
+            indicatorColor = MaterialTheme.colorScheme.surfaceVariant
+        ),
         icon = {
             tab.options.icon?.let { icon ->
                 Icon(
                     painter = icon,
-                    contentDescription =
-                    tab.options.title
+                    contentDescription = tab.options.title,
+                    modifier = Modifier
                 )
             }
         },
         label = {
             Text(
-                text = tab.options.title
+                text = tab.options.title,
+                style = MaterialTheme.typography.labelMedium
             )
         }
     )

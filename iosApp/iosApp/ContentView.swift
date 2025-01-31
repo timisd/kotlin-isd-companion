@@ -4,7 +4,9 @@ import ComposeApp
 
 struct ComposeView: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UIViewController {
-        MainViewControllerKt.MainViewController()
+        let controller = MainViewControllerKt.MainViewController()
+        controller.view.backgroundColor = .init(displayP3Red: 26/255, green: 26/255, blue: 26/255, alpha: 1)  // #1A1A1A
+        return controller
     }
 
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
@@ -12,8 +14,14 @@ struct ComposeView: UIViewControllerRepresentable {
 
 struct ContentView: View {
     var body: some View {
-        ComposeView()
-                .ignoresSafeArea(.keyboard) // Compose has own keyboard handler
+        ZStack {
+            Color(UIColor(displayP3Red: 26/255, green: 26/255, blue: 26/255, alpha: 1))
+                .ignoresSafeArea()
+            
+            ComposeView()
+                .ignoresSafeArea(.all, edges: .bottom)
+        }
+        .preferredColorScheme(.dark)
     }
 }
 

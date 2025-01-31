@@ -20,7 +20,7 @@ object SettingsTab : Tab {
 
             return remember(currentLanguage) {
                 TabOptions(
-                    index = 0u,
+                    index = 4u,
                     title = Strings.get("tab_settings", currentLanguage),
                     icon = icon
                 )

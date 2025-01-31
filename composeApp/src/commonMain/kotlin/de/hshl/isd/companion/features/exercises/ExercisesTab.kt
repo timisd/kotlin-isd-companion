@@ -20,7 +20,7 @@ object ExercisesTab : Tab {
 
             return remember(currentLanguage) {
                 TabOptions(
-                    index = 0u,
+                    index = 1u,
                     title = Strings.get("tab_exercises", currentLanguage),
                     icon = icon
                 )

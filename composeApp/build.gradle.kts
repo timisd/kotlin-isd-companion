@@ -1,7 +1,3 @@
-import org.jetbrains.compose.desktop.application.dsl.TargetFormat
-import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidApplication)
@@ -19,7 +15,7 @@ kotlin {
             }
         }
     }
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -31,7 +27,7 @@ kotlin {
             isStatic = true
         }
     }
-    
+
     sourceSets {
 
         androidMain.dependencies {
@@ -71,10 +67,10 @@ kotlin {
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.kotlinx.json)
-            
+
             // Kotlinx datetime
             implementation(libs.kotlinx.datetime)
-            
+
             // Kotlinx serialization
             implementation(libs.kotlinx.serialization.json)
 
