@@ -83,7 +83,14 @@ object Strings {
             "step_by_step" to "Step by step",
             "step_1" to "Step 1: Write the binary number",
             "step_2" to "Step 2: Invert all bits",
-            "step_3" to "Step 3: Add 1 to the result"
+            "step_3" to "Step 3: Add 1 to the result",
+
+            "encode_binary_sequence" to "Encode this binary sequence:",
+            "binary_sequence" to "Binary sequence",
+            "nrz_encoding" to "NRZ (±)",
+            "nrz_i_encoding" to "NRZ-I (±0)",
+            "mlt_3_encoding" to "MLT-3 (+0-)",
+            "new_sequence" to "New Sequence"
         ),
         "de" to mapOf(
             "settings" to "Einstellungen",
@@ -156,7 +163,14 @@ object Strings {
             "step_by_step" to "Schritt für Schritt",
             "step_1" to "Schritt 1: Schreibe die Binärzahl",
             "step_2" to "Schritt 2: Invertiere alle Bits",
-            "step_3" to "Schritt 3: Addiere 1 zum Ergebnis"
+            "step_3" to "Schritt 3: Addiere 1 zum Ergebnis",
+
+            "encode_binary_sequence" to "Codiere diese Binärsequenz:",
+            "binary_sequence" to "Binärsequenz",
+            "nrz_encoding" to "NRZ (±)",
+            "nrz_i_encoding" to "NRZ-I (±0)",
+            "mlt_3_encoding" to "MLT-3 (+0-)",
+            "new_sequence" to "Neue Sequenz"
         )
     )
 
