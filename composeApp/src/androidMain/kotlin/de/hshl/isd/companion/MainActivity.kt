@@ -11,7 +11,7 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.view.WindowCompat
 import de.hshl.isd.companion.ui.CompanionTheme
-import de.hshl.isd.companion.ui.theme.ThemeManager
+import de.hshl.isd.companion.ui.ThemeManager
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

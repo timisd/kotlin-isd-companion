@@ -1,4 +1,4 @@
-package de.hshl.isd.companion.ui.theme
+package de.hshl.isd.companion.ui
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect

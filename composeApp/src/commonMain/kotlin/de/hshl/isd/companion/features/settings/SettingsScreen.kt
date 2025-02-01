@@ -26,7 +26,7 @@ import de.hshl.isd.companion.core.localization.LanguageManager
 import de.hshl.isd.companion.core.localization.LanguageManager.currentLanguage
 import de.hshl.isd.companion.core.localization.Strings
 import de.hshl.isd.companion.core.storage.LocalStorage
-import de.hshl.isd.companion.ui.theme.ThemeManager
+import de.hshl.isd.companion.ui.ThemeManager
 import kotlinx.coroutines.launch
 
 class SettingsScreen : Screen {

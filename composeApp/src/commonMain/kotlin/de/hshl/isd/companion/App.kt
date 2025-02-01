@@ -25,7 +25,7 @@ import de.hshl.isd.companion.features.exercises.ExercisesTab
 import de.hshl.isd.companion.features.professors.ProfessorsTab
 import de.hshl.isd.companion.features.settings.SettingsTab
 import de.hshl.isd.companion.ui.CompanionTheme
-import de.hshl.isd.companion.ui.theme.ThemeManager
+import de.hshl.isd.companion.ui.ThemeManager
 
 private val storage = createStorage()
 
