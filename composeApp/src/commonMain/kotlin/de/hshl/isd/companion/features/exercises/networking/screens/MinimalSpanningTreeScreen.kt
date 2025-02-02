@@ -21,7 +21,7 @@ import de.hshl.isd.companion.core.localization.Strings
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MinimalSpantreeScreen() {
+fun MinimalSpanningTreeScreen() {
     val navigator = LocalNavigator.currentOrThrow
 
     Scaffold(
