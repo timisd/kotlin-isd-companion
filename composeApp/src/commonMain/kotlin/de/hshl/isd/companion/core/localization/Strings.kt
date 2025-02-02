@@ -94,7 +94,13 @@ object Strings {
             "generate_new_tree" to "New Tree",
             "show_solution_mst" to "Show Solution",
             "mst_exercise_description" to "Find the minimal spanning tree:",
-            "mst_solution_hint" to "Toggle the switch to see the solution"
+            "mst_solution_hint" to "Toggle the switch to see the solution",
+            "calculate_network_host" to "Calculate network and host addresses:",
+            "ip_address" to "IP Address",
+            "network_address" to "Network Address",
+            "host_address" to "Host Address",
+            "new_ip" to "New IP",
+            "show_solution_netmask" to "Toggle the switch to see the solution"
         ),
         "de" to mapOf(
             "settings" to "Einstellungen",
@@ -178,7 +184,13 @@ object Strings {
             "generate_new_tree" to "Neuer Baum",
             "show_solution_mst" to "Lösung anzeigen",
             "mst_exercise_description" to "Finde den minimalen Spannbaum:",
-            "mst_solution_hint" to "Schalter umlegen um die Lösung zu sehen"
+            "mst_solution_hint" to "Schalter umlegen um die Lösung zu sehen",
+            "calculate_network_host" to "Berechne Netzwerk- und Host-Adressen:",
+            "ip_address" to "IP-Adresse",
+            "network_address" to "Netzwerkadresse",
+            "host_address" to "Host-Adresse",
+            "new_ip" to "Neue IP",
+            "show_solution_netmask" to "Schalter umlegen um die Lösung zu sehen"
         )
     )
 
