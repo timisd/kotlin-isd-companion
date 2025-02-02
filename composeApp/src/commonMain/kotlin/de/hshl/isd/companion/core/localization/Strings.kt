@@ -90,7 +90,11 @@ object Strings {
             "nrz_encoding" to "NRZ (±)",
             "nrz_i_encoding" to "NRZ-I (±0)",
             "mlt_3_encoding" to "MLT-3 (+0-)",
-            "new_sequence" to "New Sequence"
+            "new_sequence" to "New Sequence",
+            "generate_new_tree" to "New Tree",
+            "show_solution_mst" to "Show Solution",
+            "mst_exercise_description" to "Find the minimal spanning tree:",
+            "mst_solution_hint" to "Toggle the switch to see the solution"
         ),
         "de" to mapOf(
             "settings" to "Einstellungen",
@@ -170,7 +174,11 @@ object Strings {
             "nrz_encoding" to "NRZ (±)",
             "nrz_i_encoding" to "NRZ-I (±0)",
             "mlt_3_encoding" to "MLT-3 (+0-)",
-            "new_sequence" to "Neue Sequenz"
+            "new_sequence" to "Neue Sequenz",
+            "generate_new_tree" to "Neuer Baum",
+            "show_solution_mst" to "Lösung anzeigen",
+            "mst_exercise_description" to "Finde den minimalen Spannbaum:",
+            "mst_solution_hint" to "Schalter umlegen um die Lösung zu sehen"
         )
     )
 
