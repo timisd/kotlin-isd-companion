@@ -26,9 +26,8 @@ import de.hshl.isd.companion.core.localization.Strings
 import kotlin.random.Random
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-
-data class Node(val id: String, val x: Float, val y: Float)
-data class Edge(val from: Node, val to: Node, val weight: Int)
+import de.hshl.isd.companion.features.exercises.networking.model.Node
+import de.hshl.isd.companion.features.exercises.networking.model.Edge
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

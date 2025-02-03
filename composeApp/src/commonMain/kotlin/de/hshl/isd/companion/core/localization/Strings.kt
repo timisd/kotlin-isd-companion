@@ -100,7 +100,13 @@ object Strings {
             "network_address" to "Network Address",
             "host_address" to "Host Address",
             "new_ip" to "New IP",
-            "show_solution_netmask" to "Toggle the switch to see the solution"
+            "show_solution_netmask" to "Toggle the switch to see the solution",
+            "find_shortest_path" to "Find the shortest path:",
+            "start_node" to "Start node",
+            "end_node" to "End node",
+            "new_graph" to "New Graph",
+            "show_solution_shortest_path" to "Toggle the switch to see the solution",
+            "shortest_path_length" to "Path length"
         ),
         "de" to mapOf(
             "settings" to "Einstellungen",
@@ -190,7 +196,13 @@ object Strings {
             "network_address" to "Netzwerkadresse",
             "host_address" to "Host-Adresse",
             "new_ip" to "Neue IP",
-            "show_solution_netmask" to "Schalter umlegen um die Lösung zu sehen"
+            "show_solution_netmask" to "Schalter umlegen um die Lösung zu sehen",
+            "find_shortest_path" to "Finde den kürzesten Weg:",
+            "start_node" to "Startknoten",
+            "end_node" to "Zielknoten",
+            "new_graph" to "Neuer Graph",
+            "show_solution_shortest_path" to "Schalter umlegen um die Lösung zu sehen",
+            "shortest_path_length" to "Weglänge"
         )
     )
 
