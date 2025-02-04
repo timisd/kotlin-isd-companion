@@ -106,7 +106,15 @@ object Strings {
             "end_node" to "End node",
             "new_graph" to "New Graph",
             "show_solution_shortest_path" to "Toggle the switch to see the solution",
-            "shortest_path_length" to "Path length"
+            "shortest_path_length" to "Path length",
+            "buddy_exercise_description" to "Allocate memory blocks using the Buddy system:",
+            "memory_size" to "Memory Size",
+            "request_size" to "Request Size",
+            "allocate" to "Allocate",
+            "deallocate" to "Deallocate",
+            "reset" to "Reset",
+            "memory_blocks" to "Memory Blocks",
+            "show_solution_buddy" to "Toggle the switch to see the solution"
         ),
         "de" to mapOf(
             "settings" to "Einstellungen",
@@ -202,7 +210,15 @@ object Strings {
             "end_node" to "Zielknoten",
             "new_graph" to "Neuer Graph",
             "show_solution_shortest_path" to "Schalter umlegen um die Lösung zu sehen",
-            "shortest_path_length" to "Weglänge"
+            "shortest_path_length" to "Weglänge",
+            "buddy_exercise_description" to "Speicherblöcke mit dem Buddy-System zuweisen:",
+            "memory_size" to "Speichergröße",
+            "request_size" to "Angeforderte Größe",
+            "allocate" to "Zuweisen",
+            "deallocate" to "Freigeben",
+            "reset" to "Zurücksetzen",
+            "memory_blocks" to "Speicherblöcke",
+            "show_solution_buddy" to "Schalter umlegen um die Lösung zu sehen"
         )
     )
 
