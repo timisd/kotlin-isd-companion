@@ -45,6 +45,8 @@ import androidx.compose.ui.unit.sp
 import cafe.adriel.voyager.core.screen.Screen
 import de.hshl.isd.companion.core.localization.LanguageManager.currentLanguage
 import de.hshl.isd.companion.core.localization.Strings
+import de.hshl.isd.companion.core.platform.PlatformType
+import de.hshl.isd.companion.core.platform.getPlatform
 import de.hshl.isd.companion.core.storage.LocalStorage
 import de.hshl.isd.companion.core.textinteraction.openEmail
 import de.hshl.isd.companion.core.textinteraction.openPhone
@@ -60,17 +62,22 @@ class ProfessorsScreen : Screen {
         val focusManager = LocalFocusManager.current
         val viewModel = remember { ProfessorsViewModel(storage) }
         val state by viewModel.uiState.collectAsState()
+        val bottomPadding = if (getPlatform().type == PlatformType.IOS) {
+            40.dp
+        } else {
+            16.dp
+        }
 
         Column(
             modifier = Modifier
-                .fillMaxSize()
+                .fillMaxSize().padding(16.dp, 16.dp, 16.dp, bottomPadding)
                 .clickable(
                     interactionSource = remember { MutableInteractionSource() },
                     indication = null
                 ) { focusManager.clearFocus() }
         ) {
             Row(
-                modifier = Modifier.fillMaxWidth().padding(16.dp),
+                modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {

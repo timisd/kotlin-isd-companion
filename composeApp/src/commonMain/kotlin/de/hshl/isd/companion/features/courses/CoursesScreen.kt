@@ -30,6 +30,8 @@ import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
 import de.hshl.isd.companion.core.localization.LanguageManager.currentLanguage
 import de.hshl.isd.companion.core.localization.Strings
+import de.hshl.isd.companion.core.platform.PlatformType
+import de.hshl.isd.companion.core.platform.getPlatform
 import de.hshl.isd.companion.core.storage.LocalStorage
 import de.hshl.isd.companion.features.courses.model.CourseWithProfessor
 import de.hshl.isd.companion.features.courses.viewmodel.CoursesUiState
@@ -41,13 +43,15 @@ class CoursesScreen : Screen {
         val storage = LocalStorage.current
         val viewModel = remember { CoursesViewModel(storage) }
         val state by viewModel.uiState.collectAsState()
+        val bottomPadding = if (getPlatform().type == PlatformType.IOS) {
+            28.dp
+        } else {
+            16.dp
+        }
 
-        Column(modifier = Modifier.fillMaxSize()) {
-            // Header with refresh button
+        Column(modifier = Modifier.fillMaxSize().padding(16.dp, 16.dp, 16.dp, bottomPadding)) {
             Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(16.dp),
+                modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -103,7 +107,7 @@ private fun WeeklySchedule(courses: List<CourseWithProfessor>) {
     LazyColumn(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(16.dp, 16.dp, 16.dp, 72.dp)
+            .padding(bottom = 80.dp)
     ) {
         items(dayNames) { dayName ->
             val dayNumber = (dayNames.indexOf(dayName) + 1).toString()

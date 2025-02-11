@@ -30,6 +30,8 @@ import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
 import de.hshl.isd.companion.core.localization.LanguageManager.currentLanguage
 import de.hshl.isd.companion.core.localization.Strings
+import de.hshl.isd.companion.core.platform.PlatformType
+import de.hshl.isd.companion.core.platform.getPlatform
 import de.hshl.isd.companion.features.cafeteria.model.Meal
 import de.hshl.isd.companion.features.cafeteria.viewmodel.CafeteriaUiState
 import de.hshl.isd.companion.features.cafeteria.viewmodel.CafeteriaViewModel
@@ -39,9 +41,14 @@ class CafeteriaScreen : Screen {
     override fun Content() {
         val viewModel = remember { CafeteriaViewModel() }
         val state by viewModel.menuState.collectAsState()
+        val bottomPadding = if (getPlatform().type == PlatformType.IOS) {
+            40.dp
+        } else {
+            16.dp
+        }
 
         Column(
-            modifier = Modifier.fillMaxSize().padding(16.dp, 16.dp, 16.dp, 16.dp),
+            modifier = Modifier.fillMaxSize().padding(16.dp, 16.dp, 16.dp, bottomPadding),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Row(
