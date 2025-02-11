@@ -33,29 +33,17 @@ import de.hshl.isd.companion.core.localization.Strings
 import de.hshl.isd.companion.features.cafeteria.model.Meal
 import de.hshl.isd.companion.features.cafeteria.viewmodel.CafeteriaUiState
 import de.hshl.isd.companion.features.cafeteria.viewmodel.CafeteriaViewModel
-import kotlinx.datetime.LocalDate
-
-@Composable
-private fun formatDateGerman(date: LocalDate): String {
-    // Pad single digits with leading zero
-    val day = date.dayOfMonth.toString().padStart(2, '0')
-    val month = date.monthNumber.toString().padStart(2, '0')
-    val year = date.year
-    return "$day.$month.$year"
-}
 
 class CafeteriaScreen : Screen {
     @Composable
     override fun Content() {
         val viewModel = remember { CafeteriaViewModel() }
         val state by viewModel.menuState.collectAsState()
-        val currentDate by viewModel.currentDate.collectAsState()
 
         Column(
-            modifier = Modifier.fillMaxSize().padding(16.dp),
+            modifier = Modifier.fillMaxSize().padding(16.dp, 16.dp, 16.dp, 16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // Date navigation row
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -74,7 +62,7 @@ class CafeteriaScreen : Screen {
                         style = MaterialTheme.typography.titleMedium
                     )
                     Text(
-                        text = formatDateGerman(currentDate),
+                        text = viewModel.formattedDate,
                         style = MaterialTheme.typography.headlineSmall,
                         color = MaterialTheme.colorScheme.primary
                     )
@@ -87,7 +75,6 @@ class CafeteriaScreen : Screen {
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Existing menu content
             when (val currentState = state) {
                 is CafeteriaUiState.Loading -> {
                     CircularProgressIndicator(
@@ -114,7 +101,7 @@ class CafeteriaScreen : Screen {
                             verticalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
                             items(currentState.menu.flatMap { it.meals }) { meal ->
-                                MealCard(meal = meal)
+                                MealCard(meal = meal, viewModel = viewModel)
                             }
                         }
                     }
@@ -144,7 +131,7 @@ class CafeteriaScreen : Screen {
 }
 
 @Composable
-private fun MealCard(meal: Meal) {
+private fun MealCard(meal: Meal, viewModel: CafeteriaViewModel) {
     Card(
         modifier = Modifier.fillMaxWidth(),
     ) {
@@ -163,7 +150,12 @@ private fun MealCard(meal: Meal) {
             )
             meal.prices?.students?.let { price ->
                 Text(
-                    text = "Student price: €$price",
+                    text = "${
+                        Strings.get(
+                            "student_price",
+                            currentLanguage
+                        )
+                    }: ${viewModel.formatPrice(price)} €",
                     style = MaterialTheme.typography.bodyMedium
                 )
             }

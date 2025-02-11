@@ -38,6 +38,7 @@ object Strings {
             "networking" to "Networking",
             "operating_systems" to "Operating Systems",
             "computer_engineering" to "Computer Engineering",
+            "student_price" to "Student price",
 
             "binary_to_decimal" to "Binary to Decimal",
             "decimal_to_binary" to "Decimal to Binary",
@@ -114,7 +115,20 @@ object Strings {
             "deallocate" to "Deallocate",
             "reset" to "Reset",
             "memory_blocks" to "Memory Blocks",
-            "show_solution_buddy" to "Toggle the switch to see the solution"
+            "show_solution_buddy" to "Toggle the switch to see the solution",
+            "page_replacement_algorithm" to "Page Replacement Algorithm",
+            "optimal" to "Optimal",
+            "fifo" to "FIFO",
+            "lru" to "Least Recently Used",
+            "clock" to "Clock (Second Chance)",
+            "select_algorithm" to "Select Algorithm",
+            "page_sequence" to "Page Sequence",
+            "frame_count" to "Number of Frames",
+            "page_faults" to "Page Faults",
+            "reference_string" to "Reference String",
+            "slot" to "Slot",
+            "reference" to "Reference",
+            "pointer" to "Pointer"
         ),
         "de" to mapOf(
             "settings" to "Einstellungen",
@@ -142,6 +156,7 @@ object Strings {
             "networking" to "Netzwerke",
             "operating_systems" to "Betriebssysteme",
             "computer_engineering" to "Technische Informatik",
+            "student_price" to "Studentenpreis",
 
             "tab_settings" to "Einstellungen",
             "tab_courses" to "Kurse",
@@ -218,7 +233,20 @@ object Strings {
             "deallocate" to "Freigeben",
             "reset" to "Zurücksetzen",
             "memory_blocks" to "Speicherblöcke",
-            "show_solution_buddy" to "Schalter umlegen um die Lösung zu sehen"
+            "show_solution_buddy" to "Schalter umlegen um die Lösung zu sehen",
+            "page_replacement_algorithm" to "Seitenersetzungsalgorithmus",
+            "optimal" to "Optimal",
+            "fifo" to "FIFO",
+            "lru" to "Least Recently Used",
+            "clock" to "Clock (Second Chance)",
+            "select_algorithm" to "Algorithmus auswählen",
+            "page_sequence" to "Seitenfolge",
+            "frame_count" to "Anzahl Frames",
+            "page_faults" to "Seitenfehler",
+            "reference_string" to "Referenzfolge",
+            "slot" to "Slot",
+            "reference" to "Referenz",
+            "pointer" to "Zeiger"
         )
     )
 

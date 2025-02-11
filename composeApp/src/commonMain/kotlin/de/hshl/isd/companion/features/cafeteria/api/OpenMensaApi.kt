@@ -2,12 +2,11 @@ package de.hshl.isd.companion.features.cafeteria.api
 
 import de.hshl.isd.companion.features.cafeteria.model.DayMenu
 import de.hshl.isd.companion.features.cafeteria.model.Meal
-import io.ktor.client.*
-import io.ktor.client.call.*
-import io.ktor.client.plugins.contentnegotiation.*
-import io.ktor.client.request.*
-import io.ktor.client.statement.*
-import io.ktor.serialization.kotlinx.json.*
+import io.ktor.client.HttpClient
+import io.ktor.client.call.body
+import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
+import io.ktor.client.request.get
+import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
 
 class OpenMensaApi {
@@ -21,7 +20,7 @@ class OpenMensaApi {
     }
 
     private val mensaId = "196"
-    
+
     suspend fun getMeals(date: String): List<DayMenu> {
         return try {
             val url = "https://openmensa.org/api/v2/canteens/$mensaId/days/$date/meals"
